@@ -12,6 +12,7 @@ namespace WebApplication1
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configuration.Filters.Add(new Filters.MyBasicAuthenticationFilter());
         }
     }
 }
